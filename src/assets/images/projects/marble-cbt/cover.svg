@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title">
+  <title id="title">Marble CBT mental wellness app mockup</title>
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#030712" />
+      <stop offset="1" stop-color="#08111F" />
+    </linearGradient>
+    <radialGradient id="glowIndigo" cx="0.25" cy="0.3" r="0.55">
+      <stop offset="0" stop-color="#6366F1" stop-opacity="0.18" />
+      <stop offset="1" stop-color="#6366F1" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glowViolet" cx="0.8" cy="0.7" r="0.5">
+      <stop offset="0" stop-color="#8B5CF6" stop-opacity="0.16" />
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="phoneScreen3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0B1220" />
+      <stop offset="1" stop-color="#050A16" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg3)" />
+  <rect width="1600" height="900" fill="url(#glowIndigo)" />
+  <rect width="1600" height="900" fill="url(#glowViolet)" />
+
+  <!-- calm concentric rings -->
+  <circle cx="430" cy="380" r="220" fill="none" stroke="#1E293B" stroke-width="2" />
+  <circle cx="430" cy="380" r="160" fill="none" stroke="#1E293B" stroke-width="2" />
+  <circle cx="430" cy="380" r="100" fill="none" stroke="#6366F1" stroke-width="3" opacity="0.6" />
+  <circle cx="430" cy="380" r="40" fill="#6366F1" opacity="0.25" />
+
+  <!-- exercise card -->
+  <rect x="150" y="600" width="560" height="120" rx="18" fill="#0B1220" stroke="#1E293B" stroke-width="2" />
+  <rect x="180" y="628" width="220" height="12" rx="6" fill="#334155" />
+  <rect x="180" y="656" width="160" height="10" rx="5" fill="#1E293B" />
+  <rect x="180" y="684" width="440" height="14" rx="7" fill="#111C33" />
+  <rect x="180" y="684" width="260" height="14" rx="7" fill="#8B5CF6" />
+
+  <!-- phone mockup -->
+  <rect x="850" y="120" width="280" height="560" rx="36" fill="#0F172A" stroke="#1E293B" stroke-width="2" />
+  <rect x="868" y="160" width="244" height="480" rx="18" fill="url(#phoneScreen3)" />
+  <circle cx="990" cy="290" r="70" fill="none" stroke="#8B5CF6" stroke-width="3" opacity="0.5" />
+  <circle cx="990" cy="290" r="40" fill="#6366F1" opacity="0.25" />
+  <rect x="888" y="390" width="204" height="14" rx="7" fill="#334155" />
+  <rect x="888" y="416" width="150" height="10" rx="5" fill="#1E293B" />
+  <rect x="888" y="452" width="204" height="90" rx="12" fill="#111C33" />
+  <rect x="906" y="474" width="168" height="10" rx="5" fill="#334155" />
+  <rect x="906" y="496" width="120" height="8" rx="4" fill="#1E293B" />
+  <rect x="888" y="558" width="204" height="44" rx="22" fill="#8B5CF6" opacity="0.85" />
+
+  <!-- progress bars -->
+  <g>
+    <rect x="1200" y="260" width="200" height="14" rx="7" fill="#111C33" />
+    <rect x="1200" y="260" width="130" height="14" rx="7" fill="#6366F1" />
+    <rect x="1200" y="300" width="200" height="14" rx="7" fill="#111C33" />
+    <rect x="1200" y="300" width="90" height="14" rx="7" fill="#8B5CF6" />
+    <rect x="1200" y="340" width="200" height="14" rx="7" fill="#111C33" />
+    <rect x="1200" y="340" width="160" height="14" rx="7" fill="#A78BFA" />
+  </g>
+
+  <text x="150" y="800" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#F8FAFC">Marble CBT</text>
+  <text x="150" y="835" font-family="Arial, sans-serif" font-size="18" fill="#94A3B8">Mental wellness • CBT exercises — placeholder mockup</text>
+</svg>

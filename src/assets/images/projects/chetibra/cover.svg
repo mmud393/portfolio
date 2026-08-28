@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title">
+  <title id="title">Chetibra cycling community app mockup</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#030712" />
+      <stop offset="1" stop-color="#08111F" />
+    </linearGradient>
+    <radialGradient id="glowGreen" cx="0.25" cy="0.3" r="0.55">
+      <stop offset="0" stop-color="#10B981" stop-opacity="0.20" />
+      <stop offset="1" stop-color="#10B981" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glowCyan" cx="0.8" cy="0.75" r="0.5">
+      <stop offset="0" stop-color="#06B6D4" stop-opacity="0.16" />
+      <stop offset="1" stop-color="#06B6D4" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="phoneScreen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0B1220" />
+      <stop offset="1" stop-color="#050A16" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)" />
+  <rect width="1600" height="900" fill="url(#glowGreen)" />
+  <rect width="1600" height="900" fill="url(#glowCyan)" />
+
+  <!-- map card -->
+  <rect x="120" y="150" width="620" height="480" rx="24" fill="#0B1220" stroke="#1E293B" stroke-width="2" />
+  <path d="M170 560 C260 460 320 500 400 420 C470 350 520 380 600 300" fill="none" stroke="#10B981" stroke-width="6" stroke-linecap="round" />
+  <circle cx="170" cy="560" r="10" fill="#10B981" />
+  <circle cx="600" cy="300" r="10" fill="#06B6D4" />
+  <g stroke="#1E293B" stroke-width="1">
+    <line x1="120" y1="230" x2="740" y2="230" />
+    <line x1="120" y1="310" x2="740" y2="310" />
+    <line x1="120" y1="390" x2="740" y2="390" />
+    <line x1="120" y1="470" x2="740" y2="470" />
+    <line x1="120" y1="550" x2="740" y2="550" />
+    <line x1="260" y1="150" x2="260" y2="630" />
+    <line x1="400" y1="150" x2="400" y2="630" />
+    <line x1="540" y1="150" x2="540" y2="630" />
+    <line x1="680" y1="150" x2="680" y2="630" />
+  </g>
+
+  <!-- phone mockup 1 -->
+  <rect x="800" y="120" width="280" height="560" rx="36" fill="#0F172A" stroke="#1E293B" stroke-width="2" />
+  <rect x="818" y="160" width="244" height="480" rx="18" fill="url(#phoneScreen)" />
+  <rect x="838" y="190" width="204" height="90" rx="12" fill="#111C33" />
+  <circle cx="864" cy="235" r="18" fill="#10B981" opacity="0.85" />
+  <rect x="892" y="222" width="120" height="10" rx="4" fill="#334155" />
+  <rect x="892" y="240" width="90" height="8" rx="4" fill="#1E293B" />
+  <rect x="838" y="300" width="204" height="130" rx="12" fill="#111C33" />
+  <rect x="856" y="318" width="168" height="10" rx="4" fill="#334155" />
+  <rect x="856" y="340" width="130" height="8" rx="4" fill="#1E293B" />
+  <rect x="856" y="392" width="80" height="26" rx="13" fill="#10B981" opacity="0.9" />
+  <rect x="838" y="450" width="204" height="130" rx="12" fill="#111C33" />
+  <rect x="856" y="468" width="150" height="10" rx="4" fill="#334155" />
+  <rect x="856" y="490" width="110" height="8" rx="4" fill="#1E293B" />
+  <rect x="856" y="542" width="80" height="26" rx="13" fill="#06B6D4" opacity="0.85" />
+
+  <!-- phone mockup 2, offset -->
+  <rect x="1150" y="260" width="240" height="480" rx="32" fill="#0F172A" stroke="#1E293B" stroke-width="2" />
+  <rect x="1166" y="296" width="208" height="410" rx="16" fill="url(#phoneScreen)" />
+  <circle cx="1270" cy="360" r="34" fill="#111C33" stroke="#10B981" stroke-width="2" />
+  <rect x="1190" y="418" width="160" height="10" rx="4" fill="#334155" />
+  <rect x="1190" y="440" width="120" height="8" rx="4" fill="#1E293B" />
+  <rect x="1186" y="480" width="188" height="90" rx="12" fill="#111C33" />
+  <rect x="1186" y="588" width="188" height="90" rx="12" fill="#111C33" />
+
+  <text x="140" y="710" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#F8FAFC">Chetibra</text>
+  <text x="140" y="745" font-family="Arial, sans-serif" font-size="18" fill="#94A3B8">Cycling community • Routes • Events — placeholder mockup</text>
+</svg>
