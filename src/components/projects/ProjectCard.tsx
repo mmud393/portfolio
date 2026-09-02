@@ -35,8 +35,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
             />
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute inset-0 transition-opacity duration-300 group-hover:opacity-70"
-              style={{ background: 'linear-gradient(to bottom, transparent 45%, rgba(3, 7, 18, 0.65) 100%)' }}
+              className="pointer-events-none absolute inset-0 transition-opacity duration-300 group-hover:opacity-100"
+              style={{
+                opacity: 0,
+                background: 'linear-gradient(to bottom, transparent 45%, var(--color-overlay) 100%)',
+              }}
             />
           </>
         )}

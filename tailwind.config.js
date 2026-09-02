@@ -55,7 +55,7 @@ export default {
         accent: 'var(--color-emerald)',
         card: 'var(--color-surface)',
 
-        navbar: 'rgba(3, 7, 18, 0.78)',
+        navbar: 'var(--navbar-bg)',
       },
       fontFamily: {
         sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
@@ -66,11 +66,13 @@ export default {
         xl: 'var(--radius-xl)',
       },
       backgroundImage: {
-        'gradient-primary': 'linear-gradient(135deg, #2563EB, #7C3AED)',
-        'gradient-text': 'linear-gradient(90deg, #60A5FA, #8B5CF6)',
-        'gradient-spectrum': 'linear-gradient(90deg, #22D3EE, #3B82F6, #8B5CF6)',
-        'gradient-contact': 'linear-gradient(120deg, #06B6D4, #2563EB, #7C3AED)',
-        'gradient-conic-tech': 'conic-gradient(from 180deg, #06B6D4, #3B82F6, #8B5CF6, #06B6D4)',
+        'gradient-primary': 'linear-gradient(135deg, var(--color-blue), var(--color-violet))',
+        'gradient-text': 'linear-gradient(90deg, var(--color-blue-light), var(--color-violet))',
+        'gradient-spectrum':
+          'linear-gradient(90deg, var(--color-emerald), var(--color-blue), var(--color-violet))',
+        'gradient-contact': 'linear-gradient(120deg, var(--color-blue), var(--color-violet), var(--color-emerald))',
+        'gradient-conic-tech':
+          'conic-gradient(from 180deg, var(--color-emerald), var(--color-blue), var(--color-violet), var(--color-emerald))',
         'grid-pattern':
           'linear-gradient(rgba(148, 163, 184, 0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(148, 163, 184, 0.025) 1px, transparent 1px)',
       },

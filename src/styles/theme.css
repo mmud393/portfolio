@@ -1,85 +1,127 @@
 /**
- * Centralized design tokens — dark mode is the primary experience.
- * See visual.md for the full rationale behind each value.
+ * Centralized design tokens — dual theme system.
+ * Dark (default): "Warm Ember" (orange / amber / coral).
+ * Light (.light): "Fresh Ocean" (blue / sky / mint).
+ * See colorscheme.md for the full rationale behind each value.
  */
 :root {
   /* Backgrounds */
-  --color-bg-primary: #030712;
-  --color-bg-secondary: #050a16;
-  --color-bg-tertiary: #08111f;
+  --color-bg-primary: #0c0a09;
+  --color-bg-secondary: #17110e;
+  --color-bg-tertiary: #17110e;
 
-  /* Surfaces (glassmorphism) */
-  --color-surface: rgba(15, 23, 42, 0.55);
-  --color-surface-elevated: rgba(15, 23, 42, 0.72);
-  --color-surface-hover: rgba(20, 30, 55, 0.82);
+  /* Surfaces */
+  --color-surface: #211713;
+  --color-surface-elevated: #271b16;
+  --color-surface-hover: #2b1e18;
 
   /* Text */
-  --color-text-primary: #f8fafc;
-  --color-text-secondary: #cbd5e1;
-  --color-text-muted: #94a3b8;
-  --color-text-subtle: #64748b;
+  --color-text-primary: #fff7ed;
+  --color-text-secondary: #d6c7bc;
+  --color-text-muted: #a8998e;
+  --color-text-subtle: #786b63;
 
   /* Borders */
-  --color-border: rgba(148, 163, 184, 0.1);
-  --color-border-hover: rgba(96, 165, 250, 0.28);
-  --color-border-featured: rgba(139, 92, 246, 0.25);
+  --color-border: #3a2922;
+  --color-border-hover: #7c3218;
+  --color-border-featured: #7c3218;
 
-  /* Blue */
-  --color-blue: #3b82f6;
-  --color-blue-dark: #2563eb;
-  --color-blue-light: #60a5fa;
-  --color-blue-lighter: #93c5fd;
+  /* Primary — Ember Orange */
+  --color-blue: #ff6b35;
+  --color-blue-dark: #ea580c;
+  --color-blue-light: #ff8a5b;
+  --color-blue-lighter: #ffb088;
 
-  /* Violet */
-  --color-violet: #8b5cf6;
-  --color-violet-dark: #7c3aed;
-  --color-violet-light: #a78bfa;
+  /* Secondary — Amber */
+  --color-violet: #f59e0b;
+  --color-violet-dark: #d97706;
+  --color-violet-light: #fbbf24;
 
-  /* Cyan */
-  --color-cyan: #06b6d4;
-  --color-cyan-light: #22d3ee;
-  --color-cyan-lighter: #67e8f9;
+  /* Accent (badges/icons) — mirrors primary in dark mode */
+  --color-cyan: #ff6b35;
+  --color-cyan-light: #ff8a5b;
+  --color-cyan-lighter: #ffb088;
 
-  /* Emerald */
-  --color-emerald: #10b981;
-  --color-emerald-dark: #059669;
-  --color-emerald-light: #34d399;
+  /* Accent — Coral/Red */
+  --color-emerald: #ef4444;
+  --color-emerald-dark: #dc2626;
+  --color-emerald-light: #f87171;
 
   /* Glows */
-  --glow-blue: rgba(59, 130, 246, 0.15);
-  --glow-violet: rgba(139, 92, 246, 0.15);
-  --glow-cyan: rgba(6, 182, 212, 0.1);
-  --glow-emerald: rgba(16, 185, 129, 0.15);
+  --glow-blue: rgba(255, 107, 53, 0.15);
+  --glow-violet: rgba(245, 158, 11, 0.15);
+  --glow-cyan: rgba(255, 107, 53, 0.1);
+  --glow-emerald: rgba(239, 68, 68, 0.15);
 
   /* Semantic */
-  --color-success: #10b981;
-  --color-warning: #f59e0b;
+  --color-success: #2dd4bf;
+  --color-warning: #fbbf24;
   --color-error: #ef4444;
-  --color-info: #3b82f6;
+  --color-info: #ff6b35;
+
+  --navbar-bg: rgba(12, 10, 9, 0.8);
+  --color-overlay: rgba(12, 10, 9, 0.75);
 
   --radius: 0.75rem;
   --radius-lg: 1rem;
-  --radius-xl: 1.5rem;
+  --radius-xl: 1.25rem;
 }
 
 :root.light {
-  --color-bg-primary: #f8fafc;
-  --color-bg-secondary: #ffffff;
-  --color-bg-tertiary: #f1f5f9;
+  /* Backgrounds */
+  --color-bg-primary: #f0f9ff;
+  --color-bg-secondary: #e0f2fe;
+  --color-bg-tertiary: #e0f2fe;
 
-  --color-surface: rgba(255, 255, 255, 0.7);
-  --color-surface-elevated: rgba(255, 255, 255, 0.85);
-  --color-surface-hover: rgba(241, 245, 249, 0.9);
+  /* Surfaces */
+  --color-surface: rgba(255, 255, 255, 0.9);
+  --color-surface-elevated: #ffffff;
+  --color-surface-hover: rgba(224, 242, 254, 0.9);
 
+  /* Text */
   --color-text-primary: #0f172a;
-  --color-text-secondary: #334155;
+  --color-text-secondary: #475569;
   --color-text-muted: #64748b;
   --color-text-subtle: #94a3b8;
 
-  --color-border: #e2e8f0;
-  --color-border-hover: rgba(37, 99, 235, 0.35);
-  --color-border-featured: rgba(124, 58, 237, 0.3);
+  /* Borders */
+  --color-border: #bae6fd;
+  --color-border-hover: #7dd3fc;
+  --color-border-featured: #38bdf8;
 
-  --color-blue: #2563eb;
-  --color-violet: #7c3aed;
+  /* Primary — Ocean Blue */
+  --color-blue: #0ea5e9;
+  --color-blue-dark: #0284c7;
+  --color-blue-light: #38bdf8;
+  --color-blue-lighter: #7dd3fc;
+
+  /* Secondary — Sky Blue */
+  --color-violet: #38bdf8;
+  --color-violet-dark: #0ea5e9;
+  --color-violet-light: #7dd3fc;
+
+  /* Accent (badges/icons) — mirrors primary in light mode */
+  --color-cyan: #0ea5e9;
+  --color-cyan-light: #38bdf8;
+  --color-cyan-lighter: #7dd3fc;
+
+  /* Accent — Mint/Teal */
+  --color-emerald: #2dd4bf;
+  --color-emerald-dark: #14b8a6;
+  --color-emerald-light: #5eead4;
+
+  /* Glows */
+  --glow-blue: rgba(14, 165, 233, 0.18);
+  --glow-violet: rgba(56, 189, 248, 0.18);
+  --glow-cyan: rgba(14, 165, 233, 0.12);
+  --glow-emerald: rgba(45, 212, 191, 0.18);
+
+  /* Semantic */
+  --color-success: #2dd4bf;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #0ea5e9;
+
+  --navbar-bg: rgba(255, 255, 255, 0.8);
+  --color-overlay: rgba(15, 23, 42, 0.55);
 }

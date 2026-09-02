@@ -17,7 +17,7 @@ export function ProfileVisual() {
     <div className="relative mx-auto w-full max-w-[280px] sm:max-w-[380px] lg:max-w-[440px]">
       <div className="pointer-events-none absolute inset-0 animate-orbit rounded-full border border-dashed border-border" />
 
-      <div className="relative aspect-square rounded-[2rem] bg-gradient-conic-tech p-[3px] shadow-[0_0_60px_rgba(99,102,241,0.18)]">
+      <div className="relative aspect-square rounded-[2rem] bg-gradient-conic-tech p-[3px] shadow-glow-lg">
         <div className="h-full w-full overflow-hidden rounded-[calc(2rem-3px)] bg-background-tertiary">
           <img
             src={assets.profile}

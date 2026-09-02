@@ -29,13 +29,14 @@ html {
 body {
   background-color: var(--color-bg-primary);
   background-image:
-    radial-gradient(circle at 15% 10%, rgba(37, 99, 235, 0.08), transparent 30%),
-    radial-gradient(circle at 85% 20%, rgba(124, 58, 237, 0.08), transparent 30%);
+    radial-gradient(circle at 15% 10%, var(--glow-blue), transparent 30%),
+    radial-gradient(circle at 85% 20%, var(--glow-violet), transparent 30%);
   background-attachment: fixed;
   color: var(--color-text-primary);
   font-family: 'Plus Jakarta Sans', Inter, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  transition: background-color 400ms ease, color 400ms ease;
 }
 
 section {
@@ -43,7 +44,7 @@ section {
 }
 
 ::selection {
-  background-color: rgba(139, 92, 246, 0.35);
+  background-color: var(--glow-violet);
   color: var(--color-text-primary);
 }
 
@@ -61,14 +62,14 @@ section {
 }
 
 .text-gradient {
-  background-image: linear-gradient(90deg, #60a5fa, #8b5cf6);
+  background-image: linear-gradient(90deg, var(--color-blue-light), var(--color-violet));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .text-gradient-spectrum {
-  background-image: linear-gradient(90deg, #22d3ee, #3b82f6, #8b5cf6);
+  background-image: linear-gradient(90deg, var(--color-emerald), var(--color-blue), var(--color-violet));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -78,6 +79,7 @@ section {
   background-color: var(--color-surface);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
+  transition: background-color 400ms ease, border-color 400ms ease;
 }
 
 .reveal {
