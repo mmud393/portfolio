@@ -5,12 +5,12 @@ import {
   FileCode2,
   Braces,
   Flame,
-  RefreshCcw,
-  Wind,
   GitBranch,
   Rocket,
-  Globe,
-  CreditCard,
+  Server,
+  Cloud,
+  Database,
+  Gauge,
 } from 'lucide-react';
 import type { Skill } from '../types/skill';
 
@@ -20,11 +20,11 @@ export const skills: Skill[] = [
   { id: 'nextjs', name: 'Next.js', icon: Layers },
   { id: 'typescript', name: 'TypeScript', icon: FileCode2 },
   { id: 'javascript', name: 'JavaScript', icon: Braces },
+  { id: 'nodejs', name: 'Node.js', icon: Server },
   { id: 'firebase', name: 'Firebase', icon: Flame },
-  { id: 'redux', name: 'Redux', icon: RefreshCcw },
-  { id: 'tailwind', name: 'Tailwind CSS', icon: Wind },
+  { id: 'aws', name: 'AWS', icon: Cloud },
+  { id: 'mysql-mongodb', name: 'MySQL / MongoDB', icon: Database },
   { id: 'git', name: 'Git', icon: GitBranch },
-  { id: 'expo', name: 'Expo', icon: Rocket },
-  { id: 'rest-apis', name: 'REST APIs', icon: Globe },
-  { id: 'stripe', name: 'Stripe', icon: CreditCard },
+  { id: 'expo', name: 'Expo / EAS', icon: Rocket },
+  { id: 'performance', name: 'Performance Optimization', icon: Gauge },
 ];

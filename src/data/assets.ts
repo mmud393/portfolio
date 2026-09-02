@@ -1,8 +1,7 @@
-import profile from '../assets/images/profile/profile-placeholder.svg';
+import profile from '../assets/images/profile/profile.jpg';
 
 import chetibraCover from '../assets/images/projects/chetibra/cover.svg';
 import carbonConfessionCover from '../assets/images/projects/carbon-confession/cover.svg';
-import marbleCbtCover from '../assets/images/projects/marble-cbt/cover.svg';
 
 /**
  * Central asset registry. Components import from here instead of reaching
@@ -21,8 +20,8 @@ export const assets = {
       cover: carbonConfessionCover,
       screenshots: [] as string[],
     },
-    marbleCbt: {
-      cover: marbleCbtCover,
+    cohere: {
+      cover: undefined as string | undefined,
       screenshots: [] as string[],
     },
   },

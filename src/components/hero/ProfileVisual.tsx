@@ -2,10 +2,6 @@ import { Atom, FileCode2, Braces } from 'lucide-react';
 import { assets } from '../../data/assets';
 import { AvailabilityCard } from './AvailabilityCard';
 
-// Swap the placeholder for a real photo by replacing the file at
-// src/assets/images/profile/profile-placeholder.svg (or updating the import
-// path in src/data/assets.ts) — no component changes required.
-
 const badges = [
   { icon: Atom, label: 'React', glow: 'shadow-glow-cyan', tone: 'text-cyan-light', className: 'left-0 top-6 sm:-left-6' },
   { icon: Braces, label: 'JavaScript', glow: 'shadow-glow', tone: 'text-blue-light', className: 'right-0 top-1/3 sm:-right-4' },
@@ -21,7 +17,7 @@ export function ProfileVisual() {
         <div className="h-full w-full overflow-hidden rounded-[calc(2rem-3px)] bg-background-tertiary">
           <img
             src={assets.profile}
-            alt="Areeba Raza — placeholder profile portrait, replace with a real photo"
+            alt="Muhammad Moin Ud Din"
             width={480}
             height={480}
             className="h-full w-full object-cover object-center"

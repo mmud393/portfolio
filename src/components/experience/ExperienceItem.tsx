@@ -16,7 +16,8 @@ export function ExperienceItem({ item, isLast }: ExperienceItemProps) {
 
       <h3 className="text-lg font-semibold text-foreground">{item.role}</h3>
       <p className="mt-1 text-sm font-medium text-blue-light">
-        {item.company} <span className="text-muted">• {item.period}</span>
+        {item.company}
+        {item.period && <span className="text-muted"> • {item.period}</span>}
       </p>
       <p className="mt-3 text-sm leading-relaxed text-foreground-secondary">{item.description}</p>
 
