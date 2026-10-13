@@ -1,5 +1,3 @@
-import profile from '../assets/images/profile/profile.jpg';
-
 import chetibraCover from '../assets/images/projects/chetibra/cover.svg';
 import carbonConfessionCover from '../assets/images/projects/carbon-confession/cover.svg';
 
@@ -10,7 +8,6 @@ import carbonConfessionCover from '../assets/images/projects/carbon-confession/c
  * never the components that render it.
  */
 export const assets = {
-  profile,
   projects: {
     chetibra: {
       cover: chetibraCover,

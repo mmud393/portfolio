@@ -1,7 +1,7 @@
 /**
  * Centralized design tokens — dual theme system.
  * Dark (default): "Warm Ember" (orange / amber / coral).
- * Light (.light): "Fresh Ocean" (blue / sky / mint).
+ * Light (.light): "Winter Glass" (ice / sky / frost).
  * See colorscheme.md for the full rationale behind each value.
  */
 :root {
@@ -69,14 +69,14 @@
 
 :root.light {
   /* Backgrounds */
-  --color-bg-primary: #f0f9ff;
-  --color-bg-secondary: #e0f2fe;
-  --color-bg-tertiary: #e0f2fe;
+  --color-bg-primary: #f8fdff;
+  --color-bg-secondary: #eefaff;
+  --color-bg-tertiary: #e0f7ff;
 
   /* Surfaces */
   --color-surface: rgba(255, 255, 255, 0.9);
   --color-surface-elevated: #ffffff;
-  --color-surface-hover: rgba(224, 242, 254, 0.9);
+  --color-surface-hover: rgba(224, 247, 255, 0.9);
 
   /* Text */
   --color-text-primary: #0f172a;
@@ -85,42 +85,42 @@
   --color-text-subtle: #94a3b8;
 
   /* Borders */
-  --color-border: #bae6fd;
-  --color-border-hover: #7dd3fc;
-  --color-border-featured: #38bdf8;
+  --color-border: #c8efff;
+  --color-border-hover: #8ddfff;
+  --color-border-featured: #67d8ff;
 
   /* Primary — Ocean Blue */
-  --color-blue: #0ea5e9;
+  --color-blue: #2fb7f3;
   --color-blue-dark: #0284c7;
-  --color-blue-light: #38bdf8;
-  --color-blue-lighter: #7dd3fc;
+  --color-blue-light: #67d8ff;
+  --color-blue-lighter: #b9eafe;
 
   /* Secondary — Sky Blue */
-  --color-violet: #38bdf8;
-  --color-violet-dark: #0ea5e9;
-  --color-violet-light: #7dd3fc;
+  --color-violet: #8bd7ff;
+  --color-violet-dark: #38bdf8;
+  --color-violet-light: #c4f1ff;
 
   /* Accent (badges/icons) — mirrors primary in light mode */
-  --color-cyan: #0ea5e9;
-  --color-cyan-light: #38bdf8;
-  --color-cyan-lighter: #7dd3fc;
+  --color-cyan: #2fb7f3;
+  --color-cyan-light: #67d8ff;
+  --color-cyan-lighter: #d8f7ff;
 
   /* Accent — Mint/Teal */
-  --color-emerald: #2dd4bf;
-  --color-emerald-dark: #14b8a6;
-  --color-emerald-light: #5eead4;
+  --color-emerald: #7dd3fc;
+  --color-emerald-dark: #0ea5e9;
+  --color-emerald-light: #ccfbf1;
 
   /* Glows */
-  --glow-blue: rgba(14, 165, 233, 0.18);
-  --glow-violet: rgba(56, 189, 248, 0.18);
-  --glow-cyan: rgba(14, 165, 233, 0.12);
-  --glow-emerald: rgba(45, 212, 191, 0.18);
+  --glow-blue: rgba(103, 216, 255, 0.2);
+  --glow-violet: rgba(196, 241, 255, 0.22);
+  --glow-cyan: rgba(185, 234, 254, 0.16);
+  --glow-emerald: rgba(204, 251, 241, 0.2);
 
   /* Semantic */
   --color-success: #2dd4bf;
   --color-warning: #f59e0b;
   --color-error: #ef4444;
-  --color-info: #0ea5e9;
+  --color-info: #2fb7f3;
 
   --navbar-bg: rgba(255, 255, 255, 0.8);
   --color-overlay: rgba(15, 23, 42, 0.55);

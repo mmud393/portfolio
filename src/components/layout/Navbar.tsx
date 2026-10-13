@@ -35,8 +35,8 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        'fixed inset-x-0 top-0 z-50 transition-all duration-300',
-        scrolled ? 'border-b border-border bg-navbar backdrop-blur-xl' : 'bg-transparent',
+        'fixed inset-x-0 top-0 z-50 transition-[background-color,border-color] duration-300',
+        scrolled ? 'border-b border-border bg-navbar backdrop-blur-md' : 'bg-transparent',
       )}
     >
       <PageContainer>

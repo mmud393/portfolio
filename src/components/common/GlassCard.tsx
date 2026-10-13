@@ -20,7 +20,7 @@ export function GlassCard({
   return (
     <Component
       className={cn(
-        'glass rounded-xl border transition-all duration-300',
+        'glass rounded-xl border transition-[transform,border-color,background-color,box-shadow] duration-300',
         featured ? 'border-border-featured' : 'border-border',
         'hover:border-border-hover hover:bg-surface-hover',
         glow && 'hover:shadow-glow',
