@@ -1,8 +1,14 @@
 import { useState } from 'react';
-import { Code, ExternalLink, Smartphone } from 'lucide-react';
-import type { Project } from '../../types/project';
+import { Apple, Code, ExternalLink, LayoutDashboard, Play, Smartphone } from 'lucide-react';
+import type { AppLink, Project } from '../../types/project';
 import { GlassCard } from '../common/GlassCard';
 import { Badge } from '../common/Badge';
+
+const platformIcon = {
+  ios: Apple,
+  android: Play,
+  web: ExternalLink,
+} as const;
 
 interface ProjectCardProps {
   project: Project;
@@ -12,6 +18,22 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const { title, description, technologies, links, cover, imagePosition = 'center' } = project;
   const [imageFailed, setImageFailed] = useState(false);
   const showFallback = !cover || imageFailed;
+
+  const actionLinks: { key: string; label: string; url: string; Icon: typeof Code; text?: string }[] = [];
+  if (links?.github) actionLinks.push({ key: 'github', label: 'Source code on GitHub', url: links.github, Icon: Code });
+  if (links?.live) actionLinks.push({ key: 'live', label: 'Live website', url: links.live, Icon: ExternalLink });
+  if (links?.admin) actionLinks.push({ key: 'admin', label: 'Admin dashboard', url: links.admin, Icon: LayoutDashboard });
+  if (links?.appStore) actionLinks.push({ key: 'ios', label: 'App Store', url: links.appStore, Icon: Apple });
+  if (links?.playStore) actionLinks.push({ key: 'android', label: 'Google Play', url: links.playStore, Icon: Play });
+  links?.additional?.forEach((link: AppLink) =>
+    actionLinks.push({
+      key: link.url,
+      label: link.label,
+      url: link.url,
+      Icon: platformIcon[link.platform],
+      text: link.label,
+    }),
+  );
 
   return (
     <GlassCard as="article" glow className="group flex h-full flex-col overflow-hidden">
@@ -57,30 +79,26 @@ export function ProjectCard({ project }: ProjectCardProps) {
           ))}
         </div>
 
-        {(links?.github || links?.live) && (
-          <div className="mt-auto flex items-center gap-3 pt-2 opacity-80 transition-opacity group-hover:opacity-100">
-            {links?.github && (
+        {actionLinks.length > 0 && (
+          <div className="mt-auto flex flex-wrap items-center gap-3 pt-2 opacity-80 transition-opacity group-hover:opacity-100">
+            {actionLinks.map(({ key, label, url, Icon, text }) => (
               <a
-                href={links.github}
+                key={key}
+                href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`${title} source code on GitHub`}
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted transition-colors hover:text-blue-light"
+                aria-label={`${title}: ${label}`}
+                title={label}
+                className={
+                  text
+                    ? 'inline-flex h-9 items-center gap-2 rounded-full border border-border px-3 text-xs text-muted transition-colors hover:text-blue-light'
+                    : 'inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted transition-colors hover:text-blue-light'
+                }
               >
-                <Code size={16} aria-hidden="true" />
+                <Icon size={16} aria-hidden="true" />
+                {text && <span>{text}</span>}
               </a>
-            )}
-            {links?.live && (
-              <a
-                href={links.live}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`${title} live project`}
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted transition-colors hover:text-blue-light"
-              >
-                <ExternalLink size={16} aria-hidden="true" />
-              </a>
-            )}
+            ))}
           </div>
         )}
       </div>

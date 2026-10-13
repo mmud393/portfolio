@@ -25,7 +25,7 @@ export function ProfileVisual() {
             <span className="h-3 w-3 rounded-full bg-[#ff5f57]" aria-hidden="true" />
             <span className="h-3 w-3 rounded-full bg-[#febc2e]" aria-hidden="true" />
             <span className="h-3 w-3 rounded-full bg-[#28c840]" aria-hidden="true" />
-            <span className="ml-3 font-mono text-xs text-muted">{personal.initials.toLowerCase()}.ts</span>
+            <span className="ml-3 font-mono text-xs text-muted">moin.ts</span>
           </div>
 
           <pre className="overflow-x-auto px-5 py-5 font-mono text-[12.5px] leading-7 text-foreground-secondary sm:text-sm">

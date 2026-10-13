@@ -1,8 +1,17 @@
+export interface AppLink {
+  label: string;
+  url: string;
+  platform: 'ios' | 'android' | 'web';
+}
+
 export interface ProjectLinks {
   github?: string;
   live?: string;
+  admin?: string;
   appStore?: string;
   playStore?: string;
+  /** Extra labelled links, e.g. several apps shipped under one project. */
+  additional?: AppLink[];
 }
 
 export type ImagePosition = 'center' | 'top' | 'bottom';

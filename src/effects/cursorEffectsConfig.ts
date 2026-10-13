@@ -58,7 +58,7 @@ export const DEFAULT_OPTIONS: CursorEffectsOptions = {
   spawnInterval: 60,
   plainRadius: [10, 24],
   labelRadius: [16, 58],
-  fluidOpacity: 1,
+  fluidOpacity: 0.7,
   mobileInkBoost: 1.6,
   quality: 'auto',
   respectReducedMotion: true,
