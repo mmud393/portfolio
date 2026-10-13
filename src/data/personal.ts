@@ -1,27 +1,25 @@
 export const personal = {
-  name: 'Areeba Raza',
-  firstName: 'Areeba',
-  lastName: 'Raza',
-  initials: 'AR',
-  title: 'Mobile App & Frontend Developer',
+  name: 'Muhammad Moin Ud Din',
+  firstName: 'Muhammad Moin',
+  lastName: 'Ud Din',
+  initials: 'MM',
+  title: 'Mobile & Frontend Engineer',
   tagline:
-    'I build modern, high-performance mobile apps and web experiences that are fast, accessible and impactful.',
-  aboutHeading: 'Crafting digital experiences that make a difference.',
+    'I build and lead production applications across React Native, React.js, Next.js, and Node.js — scalable architecture, cross-platform mobile apps, and fast, reliable experiences.',
+  aboutHeading: 'Building scalable mobile and web products that ship.',
   aboutDescription:
-    "I'm a passionate Mobile App & Frontend Developer with experience in building cross-platform mobile applications using React Native and modern web applications using React.js and Next.js. I love turning ideas into real products that solve problems and create value.",
-  // Replace with real contact details.
-  email: 'areeba@example.com',
-  phone: '+92 300 1234567',
+    "I'm a Mobile & Frontend Engineer with 4+ years of experience building and leading production applications across React Native, React.js, Next.js, and Node.js. I design scalable application architectures, develop cross-platform mobile apps, integrate REST APIs and third-party services, and optimize performance — with hands-on experience leading teams, running code reviews, and driving technical decisions from development through production.",
+  email: 'mmuddin393@gmail.com',
+  phone: '+92 310 6579281',
   location: 'Lahore, Pakistan',
-  experienceYears: '3+ Years',
+  experienceYears: '4+ Years',
   availability: 'Open to work',
   availabilityShort: 'Available for work',
   availabilityDetail: 'Freelance / Full-time',
-  // Replace with an actual hosted resume file.
-  resumeUrl: '#',
+  resumeUrl: '/moin-react-native-cv.pdf',
   education: {
     degree: 'BS Computer Science',
-    institution: 'PMAS-AAUR',
+    institution: 'PMAS-AAUR (Arid Agriculture University)',
     period: '2017 – 2021',
   },
 } as const;

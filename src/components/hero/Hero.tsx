@@ -14,11 +14,13 @@ export function Hero() {
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-40 left-[10%] h-[500px] w-[500px] rounded-full bg-blue blur-[110px] opacity-[0.08]"
+        className="pointer-events-none absolute -top-40 left-[10%] h-[500px] w-[500px] opacity-[0.12]"
+        style={{ background: 'radial-gradient(closest-side, var(--color-blue), transparent)' }}
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-20 right-[5%] h-[500px] w-[500px] rounded-full bg-violet blur-[110px] opacity-[0.08]"
+        className="pointer-events-none absolute -top-20 right-[5%] h-[500px] w-[500px] opacity-[0.12]"
+        style={{ background: 'radial-gradient(closest-side, var(--color-violet), transparent)' }}
       />
 
       <PageContainer className="relative">

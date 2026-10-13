@@ -35,15 +35,14 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        'fixed inset-x-0 top-0 z-50 transition-all duration-300',
-        scrolled ? 'border-b border-border bg-navbar backdrop-blur-xl' : 'bg-transparent',
+        'fixed inset-x-0 top-0 z-50 transition-[background-color,border-color] duration-300',
+        scrolled ? 'border-b border-border bg-navbar backdrop-blur-md' : 'bg-transparent',
       )}
     >
       <PageContainer>
         <nav className="flex h-[72px] items-center justify-between" aria-label="Primary">
           <a href="#home" className="flex items-center gap-2 font-bold">
-            <span className="text-gradient text-lg">{personal.initials}</span>
-            <span className="hidden text-foreground sm:inline">{personal.name}</span>
+            <span className="text-foreground">{personal.name}</span>
           </a>
 
           <ul className="hidden items-center gap-8 md:flex">
@@ -80,6 +79,7 @@ export function Navbar() {
             </button>
             <a
               href={personal.resumeUrl}
+              download
               className="inline-flex items-center gap-2 rounded-xl bg-gradient-primary px-4 py-2 text-sm font-semibold text-white shadow-glow transition-all hover:brightness-110"
             >
               <Download size={16} aria-hidden="true" />
@@ -125,6 +125,7 @@ export function Navbar() {
                 </button>
                 <a
                   href={personal.resumeUrl}
+              download
                   className="inline-flex items-center gap-2 rounded-xl bg-gradient-primary px-4 py-2 text-sm font-semibold text-white"
                 >
                   <Download size={16} aria-hidden="true" />

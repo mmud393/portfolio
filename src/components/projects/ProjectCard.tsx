@@ -14,7 +14,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const showFallback = !cover || imageFailed;
 
   return (
-    <GlassCard as="article" glow className="group flex flex-col overflow-hidden">
+    <GlassCard as="article" glow className="group flex h-full flex-col overflow-hidden">
       <div className="relative aspect-[16/9] overflow-hidden rounded-t-xl bg-background-tertiary">
         {showFallback ? (
           <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-gradient-to-br from-background-secondary to-background-tertiary text-muted">

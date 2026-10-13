@@ -8,11 +8,12 @@ export function Footer() {
   return (
     <footer className="border-t border-border py-10">
       <PageContainer className="flex flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left">
-        <span className="text-gradient text-lg font-bold">{personal.initials}</span>
-
         <p className="text-sm text-muted">
           © {year} {personal.name}. All rights reserved.
-          <span className="block sm:inline sm:ml-1">Built with ❤️ using React</span>
+          <span className="mt-1 block sm:ml-2 sm:mt-0 sm:inline">
+            Built with <span className="footer-heart" aria-label="love">❤️</span> using{' '}
+            <span className="footer-shimmer font-semibold">React</span>
+          </span>
         </p>
 
         <SocialLinks />

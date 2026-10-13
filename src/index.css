@@ -28,15 +28,23 @@ html {
 
 body {
   background-color: var(--color-bg-primary);
-  background-image:
-    radial-gradient(circle at 15% 10%, var(--glow-blue), transparent 30%),
-    radial-gradient(circle at 85% 20%, var(--glow-violet), transparent 30%);
-  background-attachment: fixed;
   color: var(--color-text-primary);
   font-family: 'Plus Jakarta Sans', Inter, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   transition: background-color 400ms ease, color 400ms ease;
+}
+
+/* Fixed ambient glow on its own layer — avoids repainting a fixed body background on scroll. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 15% 10%, var(--glow-blue), transparent 30%),
+    radial-gradient(circle at 85% 20%, var(--glow-violet), transparent 30%);
 }
 
 section {
@@ -77,23 +85,65 @@ section {
 
 .glass {
   background-color: var(--color-surface);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
   transition: background-color 400ms ease, border-color 400ms ease;
 }
 
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
+  transform: translateY(28px) scale(0.97);
 }
 
 .reveal.is-visible {
-  animation: fade-up 0.7s ease-out forwards;
+  animation: reveal-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
     transform: none;
+    filter: none;
+    animation: none;
+  }
+}
+
+.footer-heart {
+  display: inline-block;
+  animation: heart-beat 1.6s ease-in-out infinite;
+}
+
+.footer-shimmer {
+  background: linear-gradient(90deg, var(--color-cyan), var(--color-violet), var(--color-cyan));
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: text-shimmer 3s linear infinite;
+}
+
+@keyframes heart-beat {
+  0%, 40%, 100% { transform: scale(1); }
+  15% { transform: scale(1.3); }
+  30% { transform: scale(1.1); }
+}
+
+@keyframes text-shimmer {
+  to { background-position: -200% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-heart,
+  .footer-shimmer {
+    animation: none;
   }
 }

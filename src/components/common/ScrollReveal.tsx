@@ -14,7 +14,7 @@ export function ScrollReveal({ children, className, delay = 0 }: ScrollRevealPro
   return (
     <div
       ref={ref}
-      className={cn('reveal', isInView && 'is-visible', className)}
+      className={cn('reveal h-full', isInView && 'is-visible', className)}
       style={delay ? { animationDelay: `${delay}ms` } : undefined}
     >
       {children}

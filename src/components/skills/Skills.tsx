@@ -14,7 +14,7 @@ export function Skills() {
 
         <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
           {skills.map((skill, index) => (
-            <ScrollReveal key={skill.id} delay={index * 60}>
+            <ScrollReveal key={skill.id} delay={(index % 6) * 70}>
               <SkillCard skill={skill} />
             </ScrollReveal>
           ))}

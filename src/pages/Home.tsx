@@ -6,11 +6,14 @@ import { Skills } from '../components/skills/Skills';
 import { Projects } from '../components/projects/Projects';
 import { Experience } from '../components/experience/Experience';
 import { Contact } from '../components/contact/Contact';
+import { CursorEffectsLayer } from '../effects/CursorEffectsLayer';
 
 export function Home() {
   return (
     <>
+      <CursorEffectsLayer />
       <Navbar />
+      <div className="relative z-10">
       <main>
         <Hero />
         <About />
@@ -20,6 +23,7 @@ export function Home() {
         <Contact />
       </main>
       <Footer />
+      </div>
     </>
   );
 }
