@@ -150,3 +150,101 @@ section {
     animation: none;
   }
 }
+
+/* ---------------------------------------------------------------------------
+ * 3D flip card (hero)
+ * ------------------------------------------------------------------------- */
+@property --flip-progress {
+  syntax: '<percentage>';
+  inherits: true;
+  initial-value: 0%;
+}
+
+.flip-stage {
+  --mx: 50%;
+  --my: 50%;
+  transform-style: preserve-3d;
+  will-change: transform;
+  animation: flip-float 7s ease-in-out infinite;
+}
+.flip-stage[data-hover='true'] {
+  animation-play-state: paused;
+}
+@keyframes flip-float {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -8px; }
+}
+
+.flip-border {
+  /* Border doubles as the auto-flip progress ring (driven by --flip-progress). */
+  background: conic-gradient(
+    from 0deg,
+    var(--color-blue-light) var(--flip-progress),
+    var(--color-border) 0
+  );
+}
+
+.flip-face {
+  position: relative;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.flip-flipper {
+  position: relative;
+  transform-style: preserve-3d;
+}
+.flip-back {
+  position: absolute;
+  inset: 0;
+}
+.flip-back canvas { display: block; }
+
+.flip-slab {
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border);
+  pointer-events: none;
+}
+
+.flip-ambient {
+  position: absolute;
+  inset: -12% -8%;
+  background: radial-gradient(closest-side, var(--glow-blue), transparent 75%);
+  filter: blur(20px);
+  transform: translateZ(-90px);
+  pointer-events: none;
+}
+.flip-contact {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: -26px;
+  height: 24px;
+  background: radial-gradient(closest-side, rgba(0, 0, 0, 0.6), transparent);
+  filter: blur(8px);
+  transform: translateZ(-60px);
+  pointer-events: none;
+}
+
+.flip-glare {
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: radial-gradient(
+    circle at var(--mx) var(--my),
+    color-mix(in srgb, var(--color-blue-lighter) 22%, transparent),
+    transparent 55%
+  );
+  transform: translateZ(1px);
+}
+.flip-stage[data-hover='true'] .flip-glare { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .flip-stage { animation: none; }
+}

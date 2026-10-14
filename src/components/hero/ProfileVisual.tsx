@@ -1,11 +1,12 @@
 import { Atom, FileCode2, Braces } from 'lucide-react';
 import { personal } from '../../data/personal';
 import { AvailabilityCard } from './AvailabilityCard';
+import { FlipCard } from './FlipCard';
 
 const badges = [
-  { icon: Atom, label: 'React', glow: 'shadow-glow-cyan', tone: 'text-cyan-light', className: 'left-1 -top-5 sm:-left-6' },
-  { icon: Braces, label: 'JavaScript', glow: 'shadow-glow', tone: 'text-blue-light', className: 'right-1 top-1/3 sm:-right-5' },
-  { icon: FileCode2, label: 'TypeScript', glow: 'shadow-glow-lg', tone: 'text-violet-light', className: 'left-2 bottom-20 sm:-left-5' },
+  { icon: Atom, label: 'React', glow: 'shadow-glow-cyan', tone: 'text-cyan-light', className: 'left-1 -top-5 sm:-left-6', z: 48 },
+  { icon: Braces, label: 'JavaScript', glow: 'shadow-glow', tone: 'text-blue-light', className: 'right-1 top-1/3 sm:-right-5', z: 34 },
+  { icon: FileCode2, label: 'TypeScript', glow: 'shadow-glow-lg', tone: 'text-violet-light', className: 'left-2 bottom-20 sm:-left-5', z: 60 },
 ];
 
 const stack = [
@@ -15,20 +16,29 @@ const stack = [
   ['MongoDB', 'MySQL', 'Git'],
 ];
 
-/** Hero visual: a developer "card" rendered as a code editor window. */
+/** Hero visual: a developer "card" (code editor window) that tilts, flips, and flips to a developer quote. */
 export function ProfileVisual() {
   return (
-    <div className="relative mx-auto w-full max-w-[360px] pb-4 sm:pb-8 sm:max-w-[420px] md:max-w-full lg:max-w-[480px]">
-      <div className="rounded-2xl bg-gradient-conic-tech p-[2px] shadow-glow-lg">
-        <div className="overflow-hidden rounded-[calc(1rem-2px)] bg-background-tertiary">
-          <div className="flex items-center gap-2 border-b border-border px-4 py-3">
+    <FlipCard
+      className="mx-auto w-full max-w-[360px] pb-4 sm:pb-8 sm:max-w-[420px] md:max-w-full lg:max-w-[480px]"
+      front={<CardFront />}
+    />
+  );
+}
+
+function CardFront() {
+  return (
+    <div className="relative">
+      <div className="flip-border rounded-2xl p-[2px] shadow-glow-lg [backface-visibility:hidden]">
+        <div className="rounded-[calc(1rem-2px)] bg-background-tertiary">
+          <div className="flex items-center gap-2 border-b border-border px-4 py-3 [transform:translateZ(8px)] [backface-visibility:hidden]">
             <span className="h-3 w-3 rounded-full bg-[#ff5f57]" aria-hidden="true" />
             <span className="h-3 w-3 rounded-full bg-[#febc2e]" aria-hidden="true" />
             <span className="h-3 w-3 rounded-full bg-[#28c840]" aria-hidden="true" />
             <span className="ml-3 font-mono text-xs text-muted">moin.ts</span>
           </div>
 
-          <pre className="overflow-x-auto px-4 py-4 sm:px-5 sm:py-5 font-mono text-[11px] leading-6 text-foreground-secondary sm:text-sm">
+          <pre className="overflow-x-auto [transform:translateZ(16px)] [backface-visibility:hidden] px-4 py-4 sm:px-5 sm:py-5 font-mono text-[11px] leading-6 text-foreground-secondary sm:text-sm">
             <code>
               <span className="text-violet-light">const</span> <span className="text-blue-light">developer</span> = {'{'}
               {'\n  '}name: <span className="text-emerald">'{personal.firstName} {personal.lastName}'</span>,
@@ -59,17 +69,20 @@ export function ProfileVisual() {
         </div>
       </div>
 
-      {badges.map(({ icon: Icon, label, glow, tone, className }) => (
+      {badges.map(({ icon: Icon, label, glow, tone, className, z }) => (
         <div
           key={label}
-          className={`glass absolute flex h-10 w-10 items-center justify-center rounded-full border border-border sm:h-14 sm:w-14 ${glow} ${tone} ${className}`}
+          style={{ transform: `translateZ(${z}px)` }}
+          className={`glass absolute [backface-visibility:hidden] flex h-10 w-10 items-center justify-center rounded-full border border-border sm:h-14 sm:w-14 ${glow} ${tone} ${className}`}
         >
           <Icon size={20} aria-hidden="true" />
           <span className="sr-only">{label}</span>
         </div>
       ))}
 
-      <AvailabilityCard />
+      <div className="[transform:translateZ(44px)] [transform-style:preserve-3d] [backface-visibility:hidden]">
+        <AvailabilityCard />
+      </div>
     </div>
   );
 }
