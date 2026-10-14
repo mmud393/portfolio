@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Download, Moon, Sun, Menu, X } from "lucide-react";
+import { Moon, Sun, Menu, X } from "lucide-react";
 import { navigationItems } from "../../data/navigation";
 import { personal } from "../../data/personal";
 import { useActiveSection } from "../../hooks/useActiveSection";
@@ -95,14 +95,6 @@ export function Navbar() {
                   <Moon size={18} aria-hidden="true" />
                 )}
               </button>
-              <a
-                href={personal.resumeUrl}
-                download
-                className="inline-flex items-center gap-2 rounded-xl bg-gradient-primary px-4 py-2 text-sm font-semibold text-white shadow-glow transition-all hover:brightness-110"
-              >
-                <Download size={16} aria-hidden="true" />
-                Download CV
-              </a>
             </div>
 
             <button
@@ -193,15 +185,6 @@ export function Navbar() {
           </ul>
 
           <div className="relative flex items-center gap-3 border-t border-border p-4">
-            <a
-              href={personal.resumeUrl}
-              download
-              tabIndex={menuOpen ? 0 : -1}
-              className="inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-primary text-sm font-semibold text-white shadow-glow"
-            >
-              <Download size={16} aria-hidden="true" />
-              Download CV
-            </a>
             <button
               type="button"
               onClick={toggleTheme}
