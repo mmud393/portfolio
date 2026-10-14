@@ -14,5 +14,4 @@
   <rect x="690" y="460" width="220" height="60" rx="14" fill="#111A2E"/>
   <rect x="690" y="540" width="220" height="60" rx="14" fill="#111A2E"/>
   <text x="800" y="780" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="52" font-weight="700" fill="#F8FAFC">Car Sharing Booking App</text>
-  <text x="800" y="830" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="24" fill="#64748B">Placeholder — replace with cover.png / cover.jpg</text>
 </svg>

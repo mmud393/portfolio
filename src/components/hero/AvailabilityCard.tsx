@@ -4,7 +4,7 @@ import { GlassCard } from '../common/GlassCard';
 
 export function AvailabilityCard() {
   return (
-    <GlassCard className="absolute -bottom-6 left-1/2 flex w-[85%] max-w-xs -translate-x-1/2 items-center gap-3 px-4 py-3 sm:left-auto sm:right-0 sm:translate-x-0">
+    <GlassCard className="relative mt-4 flex w-full items-center gap-3 px-4 py-3 sm:absolute sm:-bottom-6 sm:right-0 sm:mt-0 sm:w-[85%] sm:max-w-xs">
       <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-primary text-white">
         <Briefcase size={18} aria-hidden="true" />
       </span>

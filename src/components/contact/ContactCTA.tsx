@@ -14,7 +14,7 @@ export function ContactCTA() {
       <div className="relative flex flex-col items-center gap-8 text-center lg:flex-row lg:justify-between lg:text-left">
         <div>
           <p className="text-sm font-semibold uppercase tracking-widest text-white/80">
-            Let's Work Together
+            Contact
           </p>
           <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">Let's work together</h2>
           <p className="mt-3 max-w-md text-white/85">

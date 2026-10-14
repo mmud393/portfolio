@@ -1,4 +1,4 @@
-import { User } from 'lucide-react';
+import { Briefcase } from 'lucide-react';
 import { personal } from '../../data/personal';
 import { GlassCard } from '../common/GlassCard';
 import { SectionHeading } from '../common/SectionHeading';
@@ -17,14 +17,14 @@ export function About() {
               <SectionHeading
                 eyebrow="About Me"
                 title={personal.aboutHeading}
-                highlight="difference"
+                highlight="ship"
               />
               <p className="mt-6 text-base leading-relaxed text-foreground-secondary">
                 {personal.aboutDescription}
               </p>
-              <Button href="#contact" variant="secondary" className="mt-8">
-                <User size={16} aria-hidden="true" />
-                More About Me
+              <Button href="#experience" variant="secondary" className="mt-8">
+                <Briefcase size={16} aria-hidden="true" />
+                View my experience
               </Button>
             </div>
 

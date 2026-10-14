@@ -17,11 +17,9 @@ Personal developer portfolio for **Areeba Raza**, Mobile App & Frontend Develope
 src/
 ├── assets/
 │   └── images/
-│       ├── profile/            profile-placeholder.svg
+│       ├── profile/            profile.(png|jpg|webp)
 │       └── projects/
-│           ├── chetibra/            cover.svg
-│           ├── carbon-confession/   cover.svg
-│           └── marble-cbt/          cover.svg
+│           └── <project-id>/        cover.(png|jpg|webp), screenshots/
 ├── components/
 │   ├── layout/         Navbar, Footer, PageContainer
 │   ├── common/          Button, GlassCard, SectionHeading, Badge, SocialLinks, IconButton, ScrollReveal
@@ -89,9 +87,9 @@ All real content is centralized so you don't need to dig through components:
 | Work experience | [src/data/experience.ts](src/data/experience.ts) |
 | Skills list | [src/data/skills.ts](src/data/skills.ts) |
 | Navigation links | [src/data/navigation.ts](src/data/navigation.ts) |
-| Profile photo | Replace `src/assets/images/profile/profile-placeholder.svg` with your photo (e.g. `profile.webp`) and update the import path in [src/data/assets.ts](src/data/assets.ts) — no component changes needed |
-| Project cover images | Replace each project's `cover.svg` under `src/assets/images/projects/<project>/` (e.g. with `cover.webp`) and update the import path in [src/data/assets.ts](src/data/assets.ts) |
-| Project screenshots (gallery, for future use) | Add files alongside each project's cover and push their imports into that project's `screenshots` array in `assets.ts` |
+| Profile photo | Add `profile.png` / `.jpg` / `.webp` to `src/assets/images/profile/` — picked up automatically via [src/data/assets.ts](src/data/assets.ts) |
+| Project cover images | Add `cover.png` / `.jpg` / `.webp` to `src/assets/images/projects/<project-id>/` (folder name = project `id`). Projects with a cover are listed first; those without fall back to `placeholder.svg` |
+| Project screenshots (gallery, for future use) | Add files to `src/assets/images/projects/<project-id>/screenshots/` — they populate the project's `screenshots` array automatically |
 | Open Graph / social preview image | Add `public/og-image.png` (1200×630 recommended) — referenced in `index.html` but not included by default |
 | Favicon | `public/favicon.svg` |
 | Resume/CV file | Host a PDF (e.g. in `public/`) and point `resumeUrl` in `personal.ts` to it |

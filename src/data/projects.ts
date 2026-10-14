@@ -6,7 +6,7 @@ const projectData: Project[] = [
     id: 'carbon-confession',
     title: 'Carbon Confession',
     description:
-      'Calculate your carbon footprint, pay to offset your daily "sins," and earn shareable "forgiven" badges — turning eco-guilt into action with a fun, ironic twist.',
+      'Works out your carbon footprint and lets you pay to offset it. Every offset earns a shareable "forgiven" badge.',
     imagePosition: 'center',
     technologies: ['React Native', 'Expo', 'Firebase', 'Stripe', 'Redux Toolkit'],
     links: {
@@ -18,19 +18,15 @@ const projectData: Project[] = [
     id: 'coaching-platform',
     title: 'Coaching Business Platform',
     description:
-      'An all-in-one business management and community platform built for coaches, healers, and service providers to run, market, and scale their practices.',
+      'A business and community app for coaches, healers and service providers to manage their practice and their clients.',
     imagePosition: 'center',
     technologies: ['React Native', 'TypeScript', 'Firebase', 'Twilio', 'Real-time Chat'],
-    links: {
-      appStore: 'https://apps.apple.com/sa/app/id6443923498',
-      playStore: 'https://play.google.com/store/apps/details?id=com.cohere.live',
-    },
   },
   {
     id: 'chetibra',
     title: 'Chetibra',
     description:
-      'A community app for cyclists to connect, ride, and share routes — create events, challenge friends, and discover new itineraries with fellow cyclists.',
+      'A social app for cyclists. Find rides nearby, organise group events and share routes.',
     imagePosition: 'center',
     technologies: ['React Native', 'Redux', 'Mapbox', 'Firebase'],
     links: {
@@ -42,19 +38,19 @@ const projectData: Project[] = [
     id: 'silverlinjen',
     title: 'Silverlinjen',
     description:
-      'A web platform with an admin dashboard and a companion driver mobile app, covering the full flow from customer-facing site to day-to-day driver operations.',
+      'A bus booking website for routes between Stockholm, Kalmar and Öland, with an admin panel and a driver app.',
     imagePosition: 'center',
     technologies: ['React Native', 'React', 'TypeScript'],
     links: {
       live: 'https://silverlinjen.se',
-      admin: 'https://admin.silverlinjen.se',
       appStore: 'https://apps.apple.com/us/app/driverapp/id6745412666',
     },
   },
   {
     id: 'gamechanger',
     title: 'Gamechanger',
-    description: 'A mobile app by Accelerate Equality, built and published for Android.',
+    description:
+      'A mobile app for Accelerate Equality, available on Google Play.',
     imagePosition: 'center',
     technologies: ['React Native'],
     links: {
@@ -65,7 +61,7 @@ const projectData: Project[] = [
     id: 'dynamics-plus-max',
     title: 'Dynamics Plus Max',
     description:
-      'A suite of three connected mobile apps — Customer, Resource and Support — serving each side of a service platform from one codebase approach.',
+      'Three connected apps (Customer, Resource and Support) for reporting faults, tracking bookings and handling work orders and assets.',
     imagePosition: 'center',
     technologies: ['React Native'],
     links: {
@@ -91,7 +87,8 @@ const projectData: Project[] = [
   {
     id: 'minifarms',
     title: 'Minifarms',
-    description: "An online farmers market for fresh local produce — a web app plus iOS and Android apps for browsing the catalogue, ordering boxes and saving favourites.",
+    description:
+      'An online farmers market. Browse local produce, order boxes and save favourites on the web, iOS or Android.',
     imagePosition: 'center',
     technologies: ['React Native', 'React'],
     links: {
@@ -103,7 +100,8 @@ const projectData: Project[] = [
   {
     id: 'marbles-cbt',
     title: 'Marbles CBT',
-    description: 'A cognitive behavioural therapy companion app for iOS and Android.',
+    description:
+      'A companion app for cognitive behavioural therapy, with thought challenges, exposure tracking and relaxation exercises.',
     imagePosition: 'center',
     technologies: ['React Native'],
     links: {
@@ -114,7 +112,8 @@ const projectData: Project[] = [
   {
     id: 'avap-crevalcore',
     title: 'Pubblica Assistenza Crevalcore',
-    description: 'A volunteer coordination app for Pubblica Assistenza Crevalcore — members receive emergency and pre-alert notifications and confirm their availability in real time.',
+    description:
+      'An app for the volunteers of Pubblica Assistenza Crevalcore. Members get emergency alerts and confirm whether they are available.',
     imagePosition: 'center',
     technologies: ['React Native'],
     links: {
@@ -125,7 +124,8 @@ const projectData: Project[] = [
   {
     id: 'fitai',
     title: 'FitAi',
-    description: 'An AI-powered fitness app — snap a photo of a meal to get calories and macros, log workouts set by set, and track weight and streaks over time.',
+    description:
+      'A fitness app that estimates calories and macros from a photo of your meal, and logs workouts and progress.',
     imagePosition: 'center',
     technologies: ['React Native'],
     links: {
@@ -133,31 +133,18 @@ const projectData: Project[] = [
     },
   },
   {
-    id: 'trick-and-treats',
-    title: 'Trick and Treats',
-    description: 'A consumer mobile app published on both the App Store and Google Play.',
-    imagePosition: 'center',
-    technologies: ['React Native'],
-    links: {
-      appStore: 'https://apps.apple.com/gb/app/trick-and-treats/id1630161563',
-      playStore: 'https://play.google.com/store/apps/details?id=com.trickandtreats',
-    },
-  },
-  {
     id: 'drive-lah',
     title: 'Car Sharing Booking App',
-    description: 'A car-sharing marketplace app for browsing, booking and unlocking cars.',
+    description:
+      'A car sharing app for finding, booking and unlocking cars.',
     imagePosition: 'center',
     technologies: ['React Native'],
-    links: {
-      appStore: 'https://apps.apple.com/us/app/drive-lah/id1500770324',
-      playStore: 'https://play.google.com/store/apps/details?id=com.drivelah.drivelah',
-    },
   },
   {
     id: 'wrestletalk',
     title: 'Wrestletalk',
-    description: 'The digital magazine app for Wrestletalk — download the latest issue, browse back issues, subscribe, and read offline from your personal library.',
+    description:
+      'The magazine app for Wrestletalk. Download the latest issue, browse back issues and subscribe.',
     imagePosition: 'center',
     technologies: ['React Native'],
     links: {
@@ -168,7 +155,8 @@ const projectData: Project[] = [
   {
     id: 'octavio',
     title: 'Octavio',
-    description: 'A mobile app published on both the App Store and Google Play.',
+    description:
+      'An app for home-service businesses to schedule jobs, send payment links and auto-reply to customer texts.',
     imagePosition: 'center',
     technologies: ['React Native'],
     links: {
@@ -179,7 +167,8 @@ const projectData: Project[] = [
   {
     id: 'gotone',
     title: 'GotOne',
-    description: 'A media-focused mobile app published on both the App Store and Google Play.',
+    description:
+      'A fishing log. Tap to record a catch with its size, location, weather and moon phase, then review it in charts.',
     imagePosition: 'center',
     technologies: ['React Native'],
     links: {

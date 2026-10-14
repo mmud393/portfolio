@@ -2,9 +2,9 @@ import type { Experience } from '../types/experience';
 
 export const experience: Experience[] = [
   {
-    id: 'nodelays-senior',
+    id: 'nodlays-senior',
     role: 'Senior Software Engineer',
-    company: 'Nodelays',
+    company: 'Nodlays',
     period: 'Present',
     description:
       'Development of mobile and web applications using React Native, React.js, Next.js, and Node.js, with a focus on performance, scalability, and maintainability. Designed application architecture, project structure, reusable components, and shared modules while making technical decisions around development patterns and technology choices. Worked with product, design, QA, and engineering teams on requirements, code quality, and technical guidance.',
@@ -13,7 +13,7 @@ export const experience: Experience[] = [
   {
     id: 'nodlays-software-engineer',
     role: 'Software Engineer',
-    company: 'nodlays',
+    company: 'Nodlays',
     period: '',
     description:
       'Developed and maintained production React Native applications, including reusable components, navigation, authentication, forms, and complex mobile features. Integrated Node.js APIs, REST APIs, and third-party services while working closely with backend developers. Handled features throughout development, testing, deployment, and maintenance while contributing to code reviews.',
